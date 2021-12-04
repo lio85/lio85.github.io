@@ -59,7 +59,7 @@ body {
     align-items: center;
     width: 100px;
     height: 20px;
-    
+
 }
 .toggle-colors__item{
     width: 20px;
@@ -221,6 +221,94 @@ body {
 .skills__bar--90::after {
     --skills-bar-length: 90%;
 }
+
+.project {
+    /* position: relative; */
+}
+
+.project__tags {
+    display: flex;
+    justify-content: space-between;
+    /* margin: .5em 0; */
+    font-size: .8rem;
+    /* width: 275px; */
+}
+
+/* @media screen and (min-width: 760px) {
+    .project__tags {
+        width: 325px;
+        padding: 0.4em 0.8em;
+    }
+} */
+
+.projetc__tag {
+    padding: .2em .4em;
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+}
+
+
+
+
+
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 175px;
+
+}
+
+.button {
+    width: 75px;
+    color: var(--bg-color);
+    line-height: 2;
+    text-align: center;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.button--primary {
+    background-color: var(--primary-color);
+}
+
+
+/* .button--primary {
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+} */
+
+.button--ghost {
+    background-color: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* @media screen and (min-width: 760px) {
+    .buttons {
+        position: absolute;
+        bottom: 1em;
+    }
+} */
+
+/* para separar los iconos del texto por derecha */
+/* .icon {
+    margin-right: 1em;
+} */
+
+/* para resetear los margenens de los elementos que querramos */
+/* .no-margin {
+    margin: 0;
+} */
+
+
+
+
+
+
+
 
 /* con esta animacion hacemos que la barra de HTML pase de translateX(0%) a (70%) */
 @keyframes skills-bar-fill {
