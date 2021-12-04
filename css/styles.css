@@ -1,0 +1,232 @@
+:root {
+    --primary-color: hsl(214,84%,56%);
+    --text-color: hsl(0,0%,83%);
+    --bg-color: hsl(0,0%,15%);
+    --bg-card-color: hsl(0,0%,20%);
+    --border-radius: .4em;
+    --transition: color .1s, background-color: .2s ease-in-out;
+    --skills-bar-length: 0%;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+img {
+    /* para quitarle el inline-block por defecto y que se aplique el border-radius-bottom del container */
+    display: block;
+    max-width: 100%;
+}
+body {
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    transition: var(--transition);
+}
+.light {
+    --text-color: hsl(0,0%,31%);
+    --bg-color: hsl(0,0%,90%);
+    --bg-card-color: hsl(0,0%,98%);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--bg-card-color);
+    transition: var(--transition);
+}
+.toggle-theme{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.toggle-theme__icon{
+    width: 20px;
+    margin-right: .5rem;
+}
+.toggle-theme__text{
+    font-size: .9rem;
+}
+.toggle-colors{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    height: 20px;
+    
+}
+.toggle-colors__item{
+    width: 20px;
+    height: 20px;
+    border: 1px solid;
+    cursor: pointer;
+}
+.toggle-colors__item--blue{
+    background-color: hsl(214,84%,56%);
+}
+.toggle-colors__item--green{
+    background-color: hsl(150,84%,56%);
+}
+.toggle-colors__item--purple{
+    background-color: hsl(276,84%,56%);
+}
+.toggle-colors__item--orange{
+    background-color: hsl(46,84%,56%);
+}
+.main {
+    display: grid;
+    padding: 1rem;
+    gap: .5em;
+}
+
+@media screen and (min-width: 720px) {
+    .main {
+        grid-template-columns: min-content 1fr;
+    }
+}
+
+.column {
+    display: grid;
+    gap: .5em
+}
+
+@media screen and (min-width: 720px) {
+    .column--right {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, min-content);
+
+        /* con esto indicamos que el contenido de las tarjetas se ajusten a su contenido verticalmente */
+        align-items: start;
+    }
+}
+
+
+
+.card {
+    padding: 1em;
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
+    /* margin-bottom: .7em; */
+}
+
+.card--profile {
+    /* max-width: 320px; */
+    padding: .9rem;
+    background-color: var(--bg-card-color);
+    border-radius: var(--border-radius);
+}
+.card__image-container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+.card__title {
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+}
+.card__subtitle {
+    /* font-size: 1.8rem; */
+    margin-top: 0;
+    opacity: .6;
+}
+.card__link {
+    margin-bottom: 0.5rem;
+}
+.card__link .icon {
+    font-size: 1.2rem;
+    margin-right: .3rem;
+}
+.card__text {
+    line-height: 1.4;
+}
+
+.skills {
+    padding: 1em  0;
+}
+
+.skills__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .35em;
+}
+
+.skills__tech {
+    margin: 0;
+    font-size: .8rem;
+}
+
+.skills__bar,
+.skills__bar::after {
+    position: relative;
+    width: 175px;
+    height: 8px;
+    background-color: #888;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.skills__bar::after {
+    content: '';
+    /* se posiciona en relacion a .skills__bar (le di relative para eso) */
+    position: absolute;
+    left: -175px;
+    background-color: var(--primary-color);
+    transition: var(--transition);
+    /* para que se vea, tenemos que darle un tamaño: lo hacemos arriba, dandole los estilis de .skill__bar */
+
+    /* aca asignamos a la animacion @keyframes skills-bar-fill para que se ejecute */
+    /* agregamos forwards para que el rellenado de barras se quede justo donde termina y no vuelva al punto de origen */
+    animation: skills-bar-fill 2s ease-in-out forwards
+}
+
+.skills__bar--10::after {
+    --skills-bar-length: 10%;
+}
+
+.skills__bar--20::after {
+    --skills-bar-length: 20%;
+}
+
+.skills__bar--30::after {
+    --skills-bar-length: 30%;
+}
+
+.skills__bar--40::after {
+    --skills-bar-length: 40%;
+}
+
+.skills__bar--50::after {
+    --skills-bar-length: 50%;
+}
+
+.skills__bar--60::after {
+    --skills-bar-length: 60%;
+}
+
+.skills__bar--70::after {
+    --skills-bar-length: 70%;
+}
+
+.skills__bar--80::after {
+    --skills-bar-length: 80%;
+}
+
+.skills__bar--90::after {
+    --skills-bar-length: 90%;
+}
+
+/* con esta animacion hacemos que la barra de HTML pase de translateX(0%) a (70%) */
+@keyframes skills-bar-fill {
+    to {
+        transform: translateX(var(--skills-bar-length))
+    }
+}
+
+/* Lo dejé en 13 minutos. */

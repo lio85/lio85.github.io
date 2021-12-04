@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Document</title>
+</head>
+<body>  
+    <header class="header">
+        <div id="toggle-theme" class="toggle-theme">
+            <img id="toggle-theme-icon" src="/assets/icons/moon.svg" alt="icon theme" class="toggle-theme__icon">
+            <p id="toggle-theme-text" class="toggle-theme__text">Dark mode</p>
+        </div>
+        <div id="toggle-colors" class="toggle-colors">
+            <div data-color="hsl(214,84%,56%)" class="toggle-colors__item toggle-colors__item--blue"></div>
+            <div data-color="hsl(150,84%,56%)" class="toggle-colors__item toggle-colors__item--green"></div>
+            <div data-color="hsl(276,84%,56%)" class="toggle-colors__item toggle-colors__item--purple"></div>
+            <div data-color="hsl(46,84%,56%)" class="toggle-colors__item toggle-colors__item--orange"></div>
+        </div>
+    </header>
+    <main class="main">
+        <section class="column- column-left">
+            <article class="card card--profile">
+                <div class="card__image-container">
+                    <img src="/assets/images/profile-image.jpg" alt="">
+                </div>
+                <div class="card__header">
+                    <h2 class="card__title">Lionel Prats</h2>
+                    <p class="card__subtitle">Programador Web Full-stack jr.</p>
+                </div>
+                <div class="card__body">
+                    <div class="card__link">
+                        <i class="fas fa-envelope icon"></i>
+                        <a href="mailto:lionel.prats.c@gmail.com">lionel.prats.c@gmail.com</a>
+                    </div>
+                    <div class="card__link">
+                        <i class="fas fa-phone-alt icon"></i>
+                        <a href="tel:+541127638483">+54 11-2763-8473</a>
+                    </div>
+                    <p class="card__text">Llevo unos 8 meses en el universo del desarrollo web, adquiriendo conocimientos y sumando práctica a diario en pos de desarrollar mis habilidades y convertirme en un profesional en la materia.</p>
+                </div>
+            </article>
+            
+        </section>
+
+        <section class="column column--right">
+            <article class="card">
+                <h2 class="card__title">Front End</h2>
+                <div class="skills">
+                    <div class="skills__item">
+                        <p class="skills__tech">HTML</p>
+                        <div class="skills__bar skills__bar--50"></div>
+                    </div>
+                    <div class="skills__item">
+                        <p class="skills__tech">CSS</p>
+                        <div class="skills__bar skills__bar--50"></div>
+                    </div>
+                    <div class="skills__item">
+                        <p class="skills__tech">JavaScript</p>
+                        <div class="skills__bar skills__bar--50"></div>
+                    </div>
+                    <div class="skills__item">
+                        <p class="skills__tech">React</p>
+                        <div class="skills__bar skills__bar--50"></div>
+                    </div>
+                    <div class="skills__item">
+                        <p class="skills__tech">EJS</p>
+                        <div class="skills__bar skills__bar--50"></div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <h2 class="card__title">Back End</h2>
+                <div class="skills">
+                    <div class="skills__item">
+                        <p class="skills__tech">Node.js</p>
+                        <div class="skills__bar skills__bar--50"></div>
+                    </div>
+                    <div class="skills__item">
+                        <p class="skills__tech">Express</p>
+                        <div class="skills__bar skills__bar--50"></div>
+                    </div>
+                    <div class="skills__item">
+                        <p class="skills__tech">MySQL</p>
+                        <div class="skills__bar skills__bar--50"></div>
+                    </div>
+                    <div class="skills__item">
+                        <p class="skills__tech">Sequelize</p>
+                        <div class="skills__bar skills__bar--50"></div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="card">
+                <h2 class="card__title">Otros</h2>
+                <div class="skills">
+                    <div class="skills__item">
+                        <p class="skills__tech">Github</p>
+                        <div class="skills__bar skills__bar--50"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="card card--project">
+                <div class="card__image-container">
+                    <img src="/assets/projects/dl.JPG" alt="Landing PageProject" class="card__image">
+                </div>
+                <div class="project">
+                    <div class="project__tags">
+                        <span class="projetc__tag">#HTML</span>
+                        <span class="projetc__tag">#CSS</span>
+                        <span class="projetc__tag">#JavaScript</span>
+                        <span class="projetc__tag">#Responsive</span>
+                    </div>
+                    <h2 class="card__title">Landing page</h2>
+                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga doloribus eum dolore commodi alias temporibus quaerat distinctio ullam aliquam deleniti!</p>
+                    <p class="card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga doloribus eum dolore commodi alias temporibus quaerat distinctio ullam aliquam deleniti!</p>
+                    <div class="buttons">
+                        <!-- un boton que nos va a llevar al demo del proyecto -->
+                        <a href="#" class="button button--primary">Demo</a>
+                        <!-- un boton que nos va a llevar al codigo del proyecto -->
+                        <a href="#" class="button button--ghost">Code</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+</html>
