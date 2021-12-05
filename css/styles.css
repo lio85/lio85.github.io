@@ -78,30 +78,10 @@ body {
 .toggle-colors__item--orange{
     background-color: hsl(46,84%,56%);
 }
+
 .main {
-    /* display: grid; */
     padding: 1rem;
-    /* gap: .5em; */
 }
-
-
-
-/* .column {
-    display: grid;
-    gap: .5em
-} */
-
-/* @media screen and (min-width: 720px) {
-    .column--right {
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, min-content);
-
-        con esto indicamos que el contenido de las tarjetas se ajusten a su contenido verticalmente
-        align-items: start;
-    }
-} */
-
-
 
 .card {
     padding: 1em;
@@ -111,7 +91,6 @@ body {
 }
 
 .card--profile {
-    /* max-width: ; */
     padding: .9rem;
     background-color: var(--bg-card-color);
     border-radius: var(--border-radius);
@@ -120,40 +99,24 @@ body {
 }
 
 .card--skill {
-   /*  width: 288px;
-    margin-right: .8em; */
     height: 234px;
 }
 
 .card__header {
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between; */
 }
 
-
-
-
-
-/* .card__image-container,
-.card__header {
-    max-width: 280px;
-    margin-left: auto;
-    margin-right: auto;
-} */
 .card__image-container--profile {
     border-radius: var(--border-radius);
     overflow: hidden;
     margin-bottom: 1em;
     width: 260px;
-    /* margin-left: auto;
-    margin-right: auto; */
 }
 
 .card__header-content {
     width: 300px;
 }
-
 
 .card__title {
     font-size: 1.8rem;
@@ -175,68 +138,19 @@ body {
     line-height: 1.4;
 }
 
-
-
-/* .skills-container {
-    display: grid;
-    grid-template-columns: repeat(3, 31%);
-    gap: 1.8%;
-}
-
-.skills__item {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.skills__bar {
-    width: 100%;
-} */
-
 .skills-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
 }
 
-@media screen and (min-width: 580px) {
-
-    .skills-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.8%;
-    }
-} 
-@media screen and (min-width: 870px) {
-
-    .skills-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.8%;
-    }
-} 
-
-
-
-
-
-
 .skills {
     padding: 1em  0;
 }
-
-/* .skills__item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: .35em;
-} */
 .skills__item {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: .5em;
-
-
-
 }
 
 .skills__tech {
@@ -252,7 +166,6 @@ body {
     background-color: #888;
     border-radius: var(--border-radius);
     overflow: hidden;
-
 }
 
 .skills__bar {
@@ -261,15 +174,10 @@ body {
 
 .skills__bar::after {
     content: '';
-    /* se posiciona en relacion a .skills__bar (le di relative para eso) */
     position: absolute;
     left: -175px;
     background-color: var(--primary-color);
     transition: var(--transition);
-    /* para que se vea, tenemos que darle un tamaño: lo hacemos arriba, dandole los estilis de .skill__bar */
-
-    /* aca asignamos a la animacion @keyframes skills-bar-fill para que se ejecute */
-    /* agregamos forwards para que el rellenado de barras se quede justo donde termina y no vuelva al punto de origen */
     animation: skills-bar-fill 2s ease-in-out forwards
 }
 
@@ -309,38 +217,27 @@ body {
     --skills-bar-length: 90%;
 }
 
-.project {
-    /* position: relative; */
+.card__image-container--project {
+    width: 260px;
+    margin-bottom: .8em;
 }
 
 .project__tags {
     display: flex;
-    justify-content: space-between;
-    /* margin: .5em 0; */
     font-size: .8rem;
-    /* width: 275px; */
 }
-
-/* @media screen and (min-width: 760px) {
-    .project__tags {
-        width: 325px;
-        padding: 0.4em 0.8em;
-    }
-} */
 
 .projetc__tag {
     padding: .2em .4em;
     border-radius: var(--border-radius);
     background-color: var(--primary-color);
     color: var(--bg-color);
+    margin-right: .3em;
 }
 
 .buttons {
     display: flex;
-    justify-content: space-between;
-    width: 175px;
-    margin-left: auto;
-    margin-right: auto;
+    justify-content: start;
 }
 
 .button {
@@ -351,18 +248,12 @@ body {
     border-radius: var(--border-radius);
     transition: var(--transition);
     font-weight: bold;
-    
+    margin-right: .5em;
 }
 
 .button--primary {
     background-color: var(--primary-color);
 }
-
-
-/* .button--primary {
-    background-color: var(--primary-color);
-    color: var(--bg-color);
-} */
 
 .button--ghost {
     background-color: transparent;
@@ -370,24 +261,6 @@ body {
     color: var(--primary-color);
 }
 
-/* @media screen and (min-width: 760px) {
-    .buttons {
-        position: absolute;
-        bottom: 1em;
-    }
-} */
-
-/* para separar los iconos del texto por derecha */
-/* .icon {
-    margin-right: 1em;
-} */
-
-/* para resetear los margenens de los elementos que querramos */
-/* .no-margin {
-    margin: 0;
-} */
-
-/* con esta animacion hacemos que la barra de HTML pase de translateX(0%) a (70%) */
 @keyframes skills-bar-fill {
     to {
         transform: translateX(var(--skills-bar-length))
@@ -402,45 +275,17 @@ body {
     .card__header-content {
         padding-left: 2.5em;
     }
-} 
-
-@media screen and (min-width: 973px) {
-    .main {
-        display: grid;
-        grid-template-columns: min-content 1fr;
-        gap: 1.8%;
-    }
-
-    .card__header {
-        flex-wrap: wrap;
-    }
-    
-    .card__header-content {
-        padding-left: 0;    
-    }
 
     .skills-container {
         display: grid;
-        grid-template-columns: repeat(3, 31%);
+        grid-template-columns: repeat(2, 1fr);
         gap: 1.8%;
     }
+} 
 
-    /* .card--skill {
-        width:initial;
-    } */
-    
-
-    .skills__item {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .skills__bar {
-        width: 100%;
-    }
-
+@media screen and (min-width: 600px) {
     .card--project {   
-        width: 96.7%;
+        width: 100%;
         height: 378px;
         display: grid;
         grid-template-columns: min-content 1fr;
@@ -455,7 +300,7 @@ body {
         padding: 1em;
         margin-top: 5px;
     }
-
+    
     .project__tags {
         margin: 0;
         display: flex;
@@ -482,5 +327,48 @@ body {
 
     .button {
         margin-right: 1em;
+    }
+}
+
+@media screen and (min-width: 870px) {
+
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.8%;
+    }
+} 
+
+@media screen and (min-width: 973px) {
+    .main {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        gap: 1.8%;
+    }
+
+    .card__header {
+        flex-wrap: wrap;
+    }
+    
+    .card__header-content {
+        padding-left: 0;    
+    }
+
+    .skills-container {
+        display: grid;
+        grid-template-columns: repeat(3, 31%);
+        gap: 1.8%;
+    }
+    .skills__item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skills__bar {
+        width: 100%;
+    }
+
+    .card--project {   
+        width: 96.7%;
     }
 }
