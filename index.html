@@ -24,87 +24,92 @@
     <main class="main">
         <section class="column- column-left">
             <article class="card card--profile">
-                <div class="card__image-container">
-                    <img src="/assets/images/profile-image.jpg" alt="">
-                </div>
                 <div class="card__header">
-                    <h2 class="card__title">Lionel Prats</h2>
-                    <p class="card__subtitle">Programador Web Full-stack jr.</p>
+                    <div class="card__image-container card__image-container--profile">
+                        <img src="/assets/images/profile-image.jpg" alt="">
+                    </div>
+                    <div class="card__header-content">
+                        <h2 class="card__title">Lionel Prats</h2>
+                        <p class="card__subtitle">Programador Web Full-stack jr.</p>
+                        <div class="card__link">
+                            <i class="fas fa-envelope icon"></i>
+                            <a href="mailto:lionel.prats.c@gmail.com">lionel.prats.c@gmail.com</a>
+                        </div>
+                        <div class="card__link">
+                            <i class="fas fa-phone-alt icon"></i>
+                            <a href="tel:+541127638483">+54 11-2763-8473</a>
+                        </div>
+                    </div>
                 </div>
                 <div class="card__body">
-                    <div class="card__link">
-                        <i class="fas fa-envelope icon"></i>
-                        <a href="mailto:lionel.prats.c@gmail.com">lionel.prats.c@gmail.com</a>
-                    </div>
-                    <div class="card__link">
-                        <i class="fas fa-phone-alt icon"></i>
-                        <a href="tel:+541127638483">+54 11-2763-8473</a>
-                    </div>
                     <p class="card__text">Hace 8 meses incié mi camino en el universo del desarrollo web realizando un curso intensivo de programación web full-stack desde cero en Digital House. <br>Al día de hoy continúo adquiriendo conocimientos y sumando práctica a diario en pos de seguir desarrollando mis habilidades con el objetivo de llegar a ser un profesional en la disciplina.</p>
                 </div>
             </article>
         </section>
 
         <section class="column column--right">
-            <article class="card">
-                <h2 class="card__title">Front End</h2>
-                <div class="skills">
-                    <div class="skills__item">
-                        <p class="skills__tech">HTML</p>
-                        <div class="skills__bar skills__bar--50"></div>
+            <div class="skills-container">
+                <article class="card card--skill">
+                    <h2 class="card__title">Front End</h2>
+                    <div class="skills">
+                        <div class="skills__item">
+                            <p class="skills__tech">HTML</p>
+                            <div class="skills__bar skills__bar--50"></div>
+                        </div>
+                        <div class="skills__item">
+                            <p class="skills__tech">CSS</p>
+                            <div class="skills__bar skills__bar--50"></div>
+                        </div>
+                        <div class="skills__item">
+                            <p class="skills__tech">JavaScript</p>
+                            <div class="skills__bar skills__bar--50"></div>
+                        </div>
+                        <div class="skills__item">
+                            <p class="skills__tech">React</p>
+                            <div class="skills__bar skills__bar--50"></div>
+                        </div>
+                        <div class="skills__item">
+                            <p class="skills__tech">EJS</p>
+                            <div class="skills__bar skills__bar--50"></div>
+                        </div>
                     </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">CSS</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">JavaScript</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">React</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">EJS</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="card">
-                <h2 class="card__title">Back End</h2>
-                <div class="skills">
-                    <div class="skills__item">
-                        <p class="skills__tech">Node.js</p>
-                        <div class="skills__bar skills__bar--50"></div>
+                <article class="card card--skill">
+                    <h2 class="card__title">Back End</h2>
+                    <div class="skills">
+                        <div class="skills__item">
+                            <p class="skills__tech">Node.js</p>
+                            <div class="skills__bar skills__bar--50"></div>
+                        </div>
+                        <div class="skills__item">
+                            <p class="skills__tech">Express</p>
+                            <div class="skills__bar skills__bar--50"></div>
+                        </div>
+                        <div class="skills__item">
+                            <p class="skills__tech">MySQL</p>
+                            <div class="skills__bar skills__bar--50"></div>
+                        </div>
+                        <div class="skills__item">
+                            <p class="skills__tech">Sequelize</p>
+                            <div class="skills__bar skills__bar--50"></div>
+                        </div>
                     </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Express</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">MySQL</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                    <div class="skills__item">
-                        <p class="skills__tech">Sequelize</p>
-                        <div class="skills__bar skills__bar--50"></div>
-                    </div>
-                </div>
-            </article>
+                </article>
 
-            <article class="card">
-                <h2 class="card__title">Otros</h2>
-                <div class="skills">
-                    <div class="skills__item">
-                        <p class="skills__tech">Github</p>
-                        <div class="skills__bar skills__bar--50"></div>
+                <article class="card card--skill">
+                    <h2 class="card__title">Otros</h2>
+                    <div class="skills">
+                        <div class="skills__item">
+                            <p class="skills__tech">Github</p>
+                            <div class="skills__bar skills__bar--50"></div>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
+            </div>
+
             <article class="card card--project">
-                <div class="card__image-container">
+                <div class="card__image-container card__image-container--project">
                     <img src="/assets/projects/dl.JPG" alt="project image" class="card__image">
                 </div>
                 <div class="project">
@@ -114,12 +119,10 @@
                         <span class="projetc__tag">#JavaScript</span>
                         <span class="projetc__tag">#Responsive</span>
                     </div>
-                    <h2 class="card__title">Landing page</h2>
+                    <h2 class="card__title card__title--project">Landing page</h2>
                     <p class="card__text">El sitio consume información de una base de datos de productos creada para tal fin, los cuales se muestran en la vista principal.</p>
                     <div class="buttons">
-                        <!-- un boton que nos va a llevar al demo del proyecto -->
                         <a href="http://dl-bebidas.herokuapp.com/" class="button button--primary">Website</a>
-                        <!-- un boton que nos va a llevar al codigo del proyecto -->
                         <a href="https://github.com/lio85/dl_bebidas" class="button button--ghost">Code</a>
                     </div>
                 </div>
