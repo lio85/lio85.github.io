@@ -228,6 +228,7 @@ body {
 
 .project__tags {
     display: flex;
+    flex-wrap: wrap;
     font-size: .8rem;
 }
 
@@ -237,6 +238,7 @@ body {
     background-color: var(--primary-color);
     color: var(--bg-color);
     margin-right: .3em;
+    margin-bottom: .5em;
     text-align: center;
 }
 
